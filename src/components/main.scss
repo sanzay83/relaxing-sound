@@ -2,8 +2,11 @@ $light-mode: rgb(230, 230, 230);
 $dark-mode: rgb(34, 34, 34);
 $cd-cover-back: rgb(155, 177, 59);
 
+button {
+  cursor: pointer;
+}
 .main-container {
-  width: 100%;
+  padding: 5px 5%;
   height: 100vh;
 }
 
@@ -19,17 +22,24 @@ $cd-cover-back: rgb(155, 177, 59);
   transition: background-color 0.9s ease;
 }
 
-.sub-container {
-  padding: 5px 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 ///////////////
 //// Header////
 ///////////////
+.header-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.header-elements {
+  width: 18rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .header-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .dark-mode-switch {
@@ -71,9 +81,15 @@ $cd-cover-back: rgb(155, 177, 59);
 //// Card  ////
 ///////////////
 
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
 .card {
+  margin: 20px;
   position: relative;
-  background: $cd-cover-back;
   width: 18rem;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -83,12 +99,14 @@ $cd-cover-back: rgb(155, 177, 59);
   box-shadow: 0 6px 10px #212121;
   border-radius: 10px;
   transition: all 0.3s ease;
+  background-size: 100%;
+  opacity: 80%;
 }
 
 .card img {
   height: auto;
   width: calc(100% - 14px);
-  opacity: 70%;
+
   border-radius: 50%;
   border: 7px solid white;
   animation: rotation 7s infinite linear;
@@ -100,9 +118,9 @@ $cd-cover-back: rgb(155, 177, 59);
   height: 10%;
   top: 50%;
   left: 50%;
-  border: 1rem solid rgb(116, 133, 44);
+  border: 1rem solid rgb(96, 100, 75);
   border-radius: 50%;
-  background-color: $cd-cover-back;
+
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -115,7 +133,7 @@ $cd-cover-back: rgb(155, 177, 59);
   left: 50%;
   border: 1.1rem solid rgb(9, 10, 6);
   border-radius: 50%;
-  background-color: $cd-cover-back;
+  background-color: rgb(48, 48, 48);
   transform: translate(-50%, -50%);
 }
 
@@ -126,4 +144,28 @@ $cd-cover-back: rgb(155, 177, 59);
   to {
     transform: rotate(359deg);
   }
+}
+
+///////////////
+//// Label ////
+///////////////
+.label-container {
+  display: grid;
+  justify-items: center;
+  font-size: 1.5rem;
+}
+
+///////////////
+// Controls  //
+///////////////
+.controller-container {
+  display: grid;
+  justify-items: center;
+}
+
+.controllers {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
