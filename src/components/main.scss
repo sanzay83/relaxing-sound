@@ -1,0 +1,129 @@
+$light-mode: rgb(230, 230, 230);
+$dark-mode: rgb(34, 34, 34);
+$cd-cover-back: rgb(155, 177, 59);
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.light {
+  color: $dark-mode;
+  background-color: $light-mode;
+  transition: background-color 0.9s ease;
+}
+
+.dark {
+  color: $light-mode;
+  background-color: $dark-mode;
+  transition: background-color 0.9s ease;
+}
+
+.sub-container {
+  padding: 5px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+///////////////
+//// Header////
+///////////////
+.header-title {
+  font-size: 2rem;
+}
+
+.dark-mode-switch {
+  text-align: right;
+}
+
+.dark-mode-switch button {
+  position: relative;
+  height: 2.2rem;
+  width: 4.2rem;
+  border-radius: 1rem;
+}
+
+.btn-dark {
+  background-color: $light-mode;
+}
+
+.dark-mode-switch button span {
+  background-color: black;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.slide-end {
+  transition: transform 0.3s ease;
+  transform: translateX(2rem);
+}
+
+.slide-start {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+///////////////
+//// Card  ////
+///////////////
+
+.card {
+  position: relative;
+  background: $cd-cover-back;
+  width: 18rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 10px #212121;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  height: auto;
+  width: calc(100% - 14px);
+  opacity: 70%;
+  border-radius: 50%;
+  border: 7px solid white;
+  animation: rotation 7s infinite linear;
+}
+
+.card .img-center-inner {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  border: 1rem solid rgb(116, 133, 44);
+  border-radius: 50%;
+  background-color: $cd-cover-back;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.card .img-center-outer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  top: 50%;
+  left: 50%;
+  border: 1.1rem solid rgb(9, 10, 6);
+  border-radius: 50%;
+  background-color: $cd-cover-back;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
