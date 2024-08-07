@@ -33,7 +33,7 @@ button {
 }
 
 .header-elements {
-  width: 18rem;
+  max-width: 18rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -90,7 +90,7 @@ button {
 .card {
   margin: 20px;
   position: relative;
-  width: 18rem;
+  max-width: 18rem;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
@@ -109,6 +109,9 @@ button {
 
   border-radius: 50%;
   border: 7px solid white;
+}
+
+.rotate {
   animation: rotation 7s infinite linear;
 }
 
@@ -168,4 +171,41 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+///////////////
+//// Timer ////
+///////////////
+.timer-container {
+  display: grid;
+  justify-items: center;
+}
+
+.form-section {
+  max-width: 18rem;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+.form-section select {
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+.form-section button {
+  background-color: rgb(0, 236, 0);
+  border-radius: 5px;
+  color: rgb(31, 13, 13);
+  font-weight: 600;
+  box-shadow: 3px 5px rgb(4, 126, 0);
+}
+
+.time-countdown {
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid black;
+  max-width: 18rem;
+  text-align: center;
 }
