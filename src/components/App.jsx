@@ -10,7 +10,7 @@ function App() {
   const [index, setIndex] = useState(0);
   const [currentMusic, setCurrentMusic] = useState(music[0]);
   const [countdown, setCountdown] = useState(0);
-  const [selectedTime, setSelectedTime] = useState("1");
+  const [selectedTime, setSelectedTime] = useState("5");
 
   useEffect(() => {
     if (play) {
@@ -72,7 +72,7 @@ function App() {
 
   const handleTimer = (e) => {
     e.preventDefault();
-    setCountdown(+selectedTime * 10);
+    setCountdown(+selectedTime * 60);
     if (!play) {
       setPlay(!play);
     }
